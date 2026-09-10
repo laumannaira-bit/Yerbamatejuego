@@ -1,0 +1,9 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yerba Mate Challenge</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="app"><header><b>🧉 Yerba Mate Challenge</b><span id="roomBadge"></span></header>
+<section id="home" class="screen active card"><div class="mate">🧉</div><h1>Yerba Mate Challenge</h1><p>Trivia competitiva sobre el sistema excretor y su relación con el mate.</p><button onclick="host()">👩‍🏫 CREAR SALA</button><button class="light" onclick="joinScreen()">📱 UNIRSE A UNA SALA</button></section>
+<section id="join" class="screen card"><h2>📱 Unirse</h2><input id="code" placeholder="Código de sala" maxlength="5"><input id="name" placeholder="Tu nombre" maxlength="20"><button onclick="join()">ENTRAR</button><button class="light" onclick="show('home')">VOLVER</button><p id="err"></p></section>
+<section id="lobby" class="screen card center"><h2>🎮 Sala <span id="codeShow"></span></h2><p>Pasales este código a tus compañeros:</p><div class="bigcode" id="bigCode"></div><h3>Jugadores</h3><div id="players"></div><button id="start" onclick="startGame()">🚀 INICIAR PARTIDA</button></section>
+<section id="game" class="screen"><div class="top"><span id="prog"></span><b id="timer">50</b><span id="pts">0 pts</span></div><div class="bar"><i id="bar"></i></div><div class="card"><span id="kind"></span><h2 id="question"></h2><div id="answers"></div><p id="feedback"></p></div></section>
+<section id="board" class="screen card"><h2>🏆 Clasificación</h2><div id="boardList"></div></section>
+<section id="over" class="screen card center"><div class="trophy">🏆</div><h1>¡Partida terminada!</h1><div id="final"></div><button onclick="location.reload()">🔄 NUEVA PARTIDA</button></section>
+</div><script src="app.js"></script></body></html>
